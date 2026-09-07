@@ -9,7 +9,7 @@ function formatDate(date: Date): string {
 export async function GET(request: Request) {
   const searchParams = new URL(request.url).searchParams
   const yearParam = searchParams.get("year")
-  const days = searchParams.get("days") === "7" ? 7 : 1
+const days = searchParams.get("days") === "7" ? 7 : 30
   const endDate = new Date()
   const startDate = new Date(endDate)
 
