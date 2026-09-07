@@ -1,0 +1,36 @@
+.event-map {
+  height: 100%;
+  width: 100%;
+  background: #05070b;
+  font-family: inherit;
+}
+
+.event-map .leaflet-control-attribution {
+  background: color-mix(in oklab, #0b1018 80%, transparent);
+  color: #8b93a7;
+  backdrop-filter: blur(8px);
+}
+
+.event-map .leaflet-control-attribution a {
+  color: #d8dee9;
+}
+
+.event-map .leaflet-popup-content-wrapper,
+.event-map .leaflet-popup-tip {
+  background: #121826;
+  color: #e8edf7;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 45%);
+}
+
+.event-map .leaflet-popup-content {
+  margin: 10px 12px;
+}
+
+.event-map .leaflet-popup-close-button {
+  color: #8b93a7 !important;
+}
+
+.map-tiles {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%) sepia(20%);
+}
+
