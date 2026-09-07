@@ -30,7 +30,7 @@ async function fetchDonki(start: string, end: string) {
     return Response.json(await getDonkiSpaceWeather(start, end))
   } catch (error) {
     if (error instanceof DonkiApiError && error.status === 401) {
-      return Response.json({ error: "NASA API key is not configured. Add NEXT_PUBLIC_NASA_API_KEY to .env.local and restart the dev server." }, { status: 503 })
+      return Response.json({ error: "NASA API key is not configured. Add NEXT_NASA_API_KEY to .env.local and restart the dev server." }, { status: 503 })
     }
     if (error instanceof DonkiApiError && error.status === 429) {
       return Response.json({ error: "NASA DONKI rate limit reached. Check your API key or try again later." }, { status: 429 })
